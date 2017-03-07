@@ -1,43 +1,32 @@
-public class Person
-{
-  String lastName;
-  String firstName;
-  String zipCode;
+public class Person{
+  private String first,last,zip;
 
-  public Person()
-  {
-    lastName = "X";
-    firstName = "X";
-    zipCode = "X";
+  public Person(){
+    this.first="X";
+    this.last="X";
+    this.zip="X";
   }
 
-  public Person(String last, String first, String zip)
-  {
-    lastName = last;
-    firstName = first;
-    zipCode = zip;
+  public Person(String first,String last,String zip){
+    this.first=first;
+    this.last=last;
+    this.zip=zip;
   }
 
-  public Person(String last, String first)
-  {
-    lastName = last;
-    firstName = first;
-    zipCode = "X";
+  public String getFirst(){
+    return first;
   }
 
-  public static void main(String[] args)
-  {
-    Person A = new Person();
-    Person B = new Person("Test", "Test", "37027");
-    A.display();
-    B.display();
+  public String getLast(){
+    return last;
   }
 
-  public void display()
-  {
-    System.out.println("Last: " + lastName);
-    System.out.println("First: " + firstName);
-    System.out.println("Zip: " + zipCode);
-    System.out.println();
+  public String getZip(){
+    return zip;
   }
+
+  public void printPerson(){
+    System.out.printf("Full Name: %s %s\nZip Code: %s\n",first,last,zip);
+  }
+
 }
